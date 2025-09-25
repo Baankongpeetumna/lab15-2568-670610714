@@ -1,5 +1,6 @@
-import { Router } from "express";
+import { Router, type Request, type Response } from "express";
 const router: Router = Router();
+
 
 // READ all
 router.get("/", () => {
@@ -7,6 +8,7 @@ router.get("/", () => {
 
 // Params URL 
 router.get("/", () => {
+    
 });
 
 router.post("/", () => {
