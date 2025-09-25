@@ -3,7 +3,7 @@ import { Router, type Request, type Response } from "express";
 import { students,courses } from "../db/db.js";
 const router = Router();
 
-router.get("/students/:studentId/courses", (req, res) => {
+router.get("/:studentId/courses", (req, res) => {
   const { studentId } = req.params;
 
   if (studentId.length !== 9) {

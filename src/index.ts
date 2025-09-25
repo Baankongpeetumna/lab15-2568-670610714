@@ -9,8 +9,8 @@ const app: any = express();
 //Middleware
 app.use(express.json());
 app.use(morgan('dev'));
-app.use("/api/v2/students", studentRouter); // student router
-app.use("/api/v2/courses", courseRouter);  // course router
+app.use("/api/v2/students", studentRouter); 
+app.use("/api/v2/courses", courseRouter);  
 
 app.listen(3000, () =>
   console.log("🚀 Server running on http://localhost:3000")
