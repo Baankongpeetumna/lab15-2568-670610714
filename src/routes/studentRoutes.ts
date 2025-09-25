@@ -6,7 +6,6 @@ const router = Router();
 router.get("/students/:studentId/courses", (req, res) => {
   const { studentId } = req.params;
 
-
   if (studentId.length !== 9) {
     return res.status(400).json({
       success: false,
@@ -23,6 +22,7 @@ router.get("/students/:studentId/courses", (req, res) => {
       message: "student does not exist"
     });
   }
+
 
   const enrolledCourses = (student.courses ?? []).map((cid) => {
     const course = courses.find((c) => c.courseId === cid);
